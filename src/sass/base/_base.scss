@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/* Root font styles are in html selector */
+html {
+  /* font-size: 10px; Now 1 rem is 10px, but don't use px for this because user device's font-size will be overwritten */
+  font-size: 62.5%; /*as 16 is default, 62.5*16 = 10px which is what we want, that is 1rem = 10px now*/
+}
+/* Put fonts in body selector and not in universal sslector */
+body {
+  box-sizing: border-box;
+  // Other properties in typography
+}

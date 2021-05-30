@@ -1,0 +1,26 @@
+.power-dropdown-button {
+  button {
+    outline: none;
+    border-radius: 3px;
+    background-color: $secondary;
+    border: 2px solid darken($secondary, 15);
+    min-width: 60px;
+    max-width: 90%;
+    padding: 8px 2px;
+    @media (max-width: 350px) {
+      padding: 5px 0;
+    }
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-around;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid darken($secondary, 35);
+      background-color: rgba($secondary, 0.5);
+    }
+    i {
+      color: rgba(163, 41, 163, 0.8);
+    }
+  }
+}

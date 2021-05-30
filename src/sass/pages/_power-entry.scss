@@ -1,0 +1,129 @@
+@import "../abstracts/variables";
+
+.power-entry {
+  display: grid;
+  max-width: 800px;
+  // background-color: $color-background;
+  grid-template-columns: minmax(95px, 1fr) repeat(2, minmax(80px, 1fr));
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+
+  grid-template-areas:
+    ". osr osl"
+    "sphh sphir sphil"
+    "cylh cylir cylil"
+    "axih axiir axiil"
+    "addh addir addil";
+  // ". sphh cylh axih"
+  // "osr sphir cylir axiir"
+  // "osl sphil cylil axiil";
+  align-items: start;
+  padding: 10px;
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: end;
+    input {
+      min-width: 80px;
+      margin: 0;
+      padding: 4px 9px;
+      border: 2px solid rgba($gray-dark, 0.5);
+      border-radius: 3px;
+      outline: none;
+      background-color: white;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        border: 2px solid rgba($gray-dark, 0.8);
+      }
+      &:focus,
+      &:active {
+        background-color: rgba(black, 0.01);
+        box-shadow: 0 0.5rem 3rem rgba(black, 0.15);
+        border: 2px solid rgba($color-primary, 0.8);
+      }
+      &.error {
+        border: 2px solid $danger;
+      }
+    }
+    &__message {
+      margin-top: 2px;
+      line-height: 1;
+      font-size: 1.15rem;
+      color: $red;
+      font-weight: 500;
+      @media screen and(max-width: $breakpoint-sm) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__header {
+    font-size: 1.8rem;
+    @media screen and(max-width: $breakpoint-sm) {
+      font-size: 1.5rem;
+    }
+    &--sph {
+      grid-area: sphh;
+    }
+    &--cyl {
+      grid-area: cylh;
+    }
+    &--axi {
+      grid-area: axih;
+    }
+    &--add {
+      grid-area: addh;
+    }
+  }
+  &__eye-label {
+    padding-right: 8px;
+    &--r {
+      grid-area: osr;
+    }
+    &--l {
+      grid-area: osl;
+    }
+  }
+  &__input {
+    &-sph {
+      &--r {
+        grid-area: sphir;
+      }
+      &--l {
+        grid-area: sphil;
+      }
+    }
+    &-cyl {
+      &--r {
+        grid-area: cylir;
+      }
+      &--l {
+        grid-area: cylil;
+      }
+    }
+    &-axi {
+      &--r {
+        grid-area: axiir;
+      }
+      &--l {
+        grid-area: axiil;
+      }
+    }
+    &-addi {
+      &--r {
+        grid-area: addir;
+      }
+      &--l {
+        grid-area: addil;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.additional-power-grid {
+  display: grid;
+  min-width: 500px;
+  max-width: 800px;
+  // background-color: $color-background;
+  grid-template-columns: minmax(150px, max-content) 180px;
+  grid-template-rows: repeat(2, minmax(45px, 1fr));
+  row-gap: 8px;
+  column-gap: 10px;
+  grid-template-areas:
+    ". heading"
+    "label-r input-r"
+    "label-l input-l";
+  align-items: start;
+  padding: 10px;
+  &__header {
+    grid-area: heading;
+    border-bottom: 1px solid black;
+  }
+  &__eye-label {
+    &--r {
+      grid-area: label-r;
+    }
+    &--l {
+      grid-area: label-l;
+    }
+  }
+  &__input {
+    &--r {
+      grid-area: input-r;
+    }
+    &--l {
+      grid-area: input-l;
+    }
+  }
+}
