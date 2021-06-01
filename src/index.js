@@ -1,12 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// Main css for everything
 import "./index.css";
+// For carousel
+import "./lib/owlcarousel/assets/owl.carousel.min.css";
 import App from "./App";
+// TODO: Fix jQuery error
+// import "./lib/easing/easing.min.js";
+// import "./lib/owlcarousel/owl.carousel.min.js";
+// import "./mail/jqBootstrapValidation.min.js";
+// import "./mail/contact.js";
+// import "./js/main";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
